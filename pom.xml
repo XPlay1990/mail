@@ -17,6 +17,7 @@
         <java.version>19</java.version>
 
         <apache-commons.version>3.12.0</apache-commons.version>
+        <gson.version>2.10</gson.version>
     </properties>
     <dependencies>
         <dependency>
@@ -26,7 +27,34 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-integration</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.integration</groupId>
+            <artifactId>spring-integration-test</artifactId>
             <scope>test</scope>
         </dependency>
 
@@ -35,7 +63,17 @@
             <artifactId>commons-lang3</artifactId>
             <version>${apache-commons.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${gson.version}</version>
+        </dependency>
 
+        <dependency>
+            <groupId>com.thedeanda</groupId>
+            <artifactId>lorem</artifactId>
+            <version>2.1</version>
+        </dependency>
     </dependencies>
 
     <build>

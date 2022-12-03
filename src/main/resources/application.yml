@@ -10,3 +10,7 @@ spring:
           auth: true
           starttls:
             enable: true
+  task:
+    scheduling:
+      pool:
+        size: 8
