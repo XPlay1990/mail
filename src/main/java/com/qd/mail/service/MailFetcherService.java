@@ -3,7 +3,7 @@ package com.qd.mail.service;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 import com.qd.mail.json.MailConfig;
-import com.qd.mail.json.MailConnection;
+import com.qd.mail.json.util.MailConnection;
 import com.qd.mail.json.MailConnectionList;
 import com.qd.mail.mailHandler.AbstractMailHandler;
 import com.qd.mail.service.util.MailAuthenticator;
@@ -30,7 +30,7 @@ public class MailFetcherService {
         this.mailHandlerList = mailHandlerList;
     }
 
-    @Scheduled(fixedRate = 10000)
+    @Scheduled(fixedDelay = 10000)
     public void fetchConfiguredMails() throws FileNotFoundException {
         AtomicReference<Integer> processedMailCount = new AtomicReference<>(0);
 

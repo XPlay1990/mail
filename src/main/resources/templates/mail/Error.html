@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:remove="all">Error while processing ${id}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<p>
+    <span th:text="'Error while processing Mail '"></span>
+    <br>
+    <span th:text="${id}"></span>
+</p>
+<p>
+    <span th:text="'Stacktrace: '"></span>
+    <br>
+    <span th:text="${stacktrace}"></span>
+</p>
+<br>
+<p>
+    Best regards, <br/>
+    <em>Mail Service</em>
+</p>
+</body>
+</html>
