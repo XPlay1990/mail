@@ -1,1 +1,3 @@
-Quick send/receive E-Mail test with spring boot 3.x.x / jakarta.mail
+# What it does:
+- Fetch multiple (configurable) Email Accounts/Postboxes
+- handle Messages with configured Handler-Classes, e.g. Upload to Filenet
